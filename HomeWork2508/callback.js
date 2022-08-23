@@ -42,11 +42,11 @@ function checkAge(age, successCallback, errorCallback) {
     }, 500)
 
 }
-
+const myList=["Jameson", "Chivas Regal", "Jack Daniels"];
 function checkDrinkingAllow(drinkingAllowed, successCallback, errorCallback) {
     setTimeout(() => {
         if (drinkingAllowed === true) {
-            return successCallback(["Jameson", "Chivas Regal", "Jack Daniels"]);
+            return successCallback(myList);
         }
         else if (drinkingAllowed === false) {
             return errorCallback({ err: "Boyuyende gel" });
@@ -76,7 +76,7 @@ function getIdByViskey(name, successCallback, errorCallback) {
 function getViskeyInfo(id, successCallback, errorCallback) {
     setTimeout(() => {
         if (id === 1234) {
-            return successCallback({ alcohol: 40, slogan: "THIS IS BAWQABIRWEY" });
+            return successCallback({name:myList[0] , alcohol: 40, slogan: "THIS IS BAWQABIRWEY" });
         } else {
             return errorCallback({ err: "Melumat yoxdur" })
         }

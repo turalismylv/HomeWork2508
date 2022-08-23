@@ -50,12 +50,12 @@ function checkAge(age) {
     })
 
 }
-
+const myList=["Jameson", "Chivas Regal", "Jack Daniels"];
 function checkDrinkingAllow(drinkingAllowed) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (drinkingAllowed === true) {
-                return resolve(["Jameson", "Chivas Regal", "Jack Daniels"]);
+                return resolve(myList);
             }
             else if (drinkingAllowed === false) {
                 return reject({ err: "Boyuyende gel" });
@@ -91,7 +91,7 @@ function getViskeyInfo(id) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (id === 1234) {
-                return resolve({ alcohol: 40, slogan: "THIS IS BAWQABIRWEY" });
+                return resolve({ name:myList[0], alcohol: 40, slogan: "THIS IS BAWQABIRWEY" });
             } else {
                 return reject({ err: "Melumat yoxdur" })
             }
